@@ -1,15 +1,15 @@
 import { NavLink } from 'react-router-dom';
 import clsx from 'clsx';
-import css from './Navigation..module.css';
+import styles from './Navigation..module.css';
 
 const navLinkCss = ({ isActive }) => {
-  return clsx(css.link, isActive && css.active);
+  return clsx(styles.link, isActive && styles.active);
 };
 
 export default function Navigation() {
   return (
-    <header>
-      <nav>
+    <header className={styles.header}>
+      <nav className={styles.nav}>
         <NavLink to="/" className={navLinkCss}>
           Home
         </NavLink>
