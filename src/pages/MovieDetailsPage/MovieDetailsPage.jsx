@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { Suspense, useEffect, useRef, useState } from 'react';
 import { Link, useParams, Outlet, useLocation } from 'react-router-dom';
 import { getMovies } from '../../apiService/movies';
 import { transformDetailsInfo } from '../../helpers/transformMoviesInfo';
@@ -86,7 +86,9 @@ export default function MovieDetailsPage() {
               </li>
             </ul>
           </div>
-          <Outlet />
+          <Suspense fallback={<div>Loading page code...</div>}>
+            <Outlet />
+          </Suspense>
         </div>
       )}
     </>

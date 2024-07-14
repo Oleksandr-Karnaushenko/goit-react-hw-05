@@ -10,9 +10,9 @@ const NotFoundPage = lazy(() =>
   import('../../pages/NotFoundPage/NotFoundPage')
 );
 
-import Navigation from '../Navigation/Navigation';
-import MovieCast from '../MovieCast/MovieCast';
-import MovieReviews from '../MovieReviews/MovieReviews';
+const Navigation = lazy(() => import('../Navigation/Navigation'));
+const MovieCast = lazy(() => import('../MovieCast/MovieCast'));
+const MovieReviews = lazy(() => import('../MovieReviews/MovieReviews'));
 
 export default function App() {
   return (
