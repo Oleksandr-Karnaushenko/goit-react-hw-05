@@ -47,15 +47,17 @@ export default function MovieDetailsPage() {
       {movie && (
         <div className={styles.details}>
           <div className={styles.info}>
-            <img
-              src={
-                movie?.poster_path
-                  ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
-                  : defaultImg
-              }
-              alt="poster"
-              className={styles.img}
-            />
+            <div>
+              <img
+                src={
+                  movie?.poster_path
+                    ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
+                    : defaultImg
+                }
+                alt="poster"
+                className={styles.img}
+              />
+            </div>
             <div className={styles.description}>
               <h2>
                 {movie?.title} ({movie?.release_date})
