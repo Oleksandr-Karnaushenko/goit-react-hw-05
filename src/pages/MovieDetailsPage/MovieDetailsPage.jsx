@@ -35,7 +35,7 @@ export default function MovieDetailsPage() {
     }
 
     fetchData();
-  }, []);
+  }, [movieId]);
 
   return (
     <>

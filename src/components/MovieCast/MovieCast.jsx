@@ -30,7 +30,7 @@ export default function MovieCast() {
     }
 
     fetchData();
-  }, []);
+  }, [movieId]);
   return (
     <>
       {loader && <Loader />}
